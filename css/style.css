@@ -1,0 +1,210 @@
+/* Menu responsivo */
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+} 
+nav{
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background: black;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+}
+nav .logo{
+  color: white;
+  font-size: 25px;
+  font-weight: 600;
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li{
+  margin: 0 5px;
+}
+nav ul li a{
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover{
+  color: #111;
+  background: #fff;
+}
+nav .menu-btn i{
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"]{
+  display: none;
+}
+@media (min-width: 1024px){
+  nav{
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 1024px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul{
+    left: 0;
+  }
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: cyan;
+  }
+}
+/* Fim do menu responsivo */  
+
+/*CSS para títulos */
+
+.titulos {
+  text-align: center;
+  margin-top: 30px;
+}
+.line {
+  border-bottom: 1px solid rgb(228, 228, 228);
+}
+
+/*CSS para títulos */
+
+/* CSS para produtos */
+
+.grid-item {
+    margin-top: 30px;
+    padding: 15px;
+    text-align: center;
+    border-bottom:1px solid rgb(228, 228, 228);
+}
+
+.grid-item p {
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.comprar {
+    background: white;
+    padding: 4px;
+    border: 1px solid black;
+    margin-top: 5px;
+}
+
+.comprar:hover {
+  background: blue;
+  transition-duration: 0.5s;
+  color: white;
+}
+
+.grid-item:hover {
+    border: 1px solid rgb(228, 228, 228) ;
+}
+
+.btnvermais {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.vermais{
+  padding: 5px;
+  background: white;
+  border: 1px solid black;
+}
+.vermais:hover {
+  background: blue;
+  transition-duration: 0.5s;
+  color: white;
+}
+
+
+
+@media only screen and (min-width: 320px) {
+    .grid-container{
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media only screen and (min-width: 544px) {
+  .grid-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    column-gap: 7%;     
+  }
+}
+
+@media only screen and (min-width: 768px) {
+    .grid-container{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); 
+      column-gap: 7%;     
+    }
+}
+
+ @media only screen and (min-width: 1024px) {
+    .grid-container{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); 
+      column-gap: 7%;  
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .grid-container{
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);   
+    }
+}
+
+
+
+/* Fim CSS para produtos */
+
+
