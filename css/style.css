@@ -27,6 +27,7 @@ nav ul{
   display: flex;
   flex-wrap: wrap;
   list-style: none;
+  overflow-x: auto;
 }
 nav ul li{
   margin: 0 5px;
@@ -175,6 +176,7 @@ input[type="checkbox"]{
     .grid-container{
       display: grid;
       grid-template-columns: repeat(1, 1fr);
+      overflow: auto;
     }
 }
 
@@ -182,7 +184,8 @@ input[type="checkbox"]{
   .grid-container{
     display: grid;
     grid-template-columns: repeat(2, 1fr); 
-    column-gap: 7%;     
+    column-gap: 7%;
+    overflow: auto;     
   }
 }
 
